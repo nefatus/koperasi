@@ -11,14 +11,31 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Office</th>
-                    <th>Age</th>
-                    <th>Start date</th>
-                    <th>Salary</th>
+                    <th>Id Anggota</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Telp</th>
+                    <th>TTL</th>
+                    <th>Username</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Action</th>
                   </tr>
+                  @foreach($petugas as $p)
+                  <tr>
+                  <td>{{$p->id_petugas}}</td>
+                  <td>{{$p->nama}}</td>
+                  <td>{{$p->alamat}}</td>
+                  <td>{{$p->telp}}</td>
+                  <td>{{$p->ttl}}</td>
+                  <td>{{$p->username}}</td>
+                  <td>{{$p->jeniskelamin}}</td>
+                  <td>
+                      <a href="/petugas/edit/{{$p->id_petugas}}"> Edit | </a>
+                      <a href="/petugas/hapus/{{$p->id_petugas}}"> Hapus </a>
+                  </tr>
+                  @endforeach
                 </thead>
+              
               
 
       </div>

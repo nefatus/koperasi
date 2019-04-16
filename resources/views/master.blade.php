@@ -101,9 +101,9 @@
           <span>Form</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="petugas">Form Petugas</a>
-          <a class="dropdown-item" href="register.html">Form Anggota</a>
-          <a class="dropdown-item" href="forgot-password.html">Form Simpanan</a>
+          <a class="dropdown-item" href="form1">Form Petugas</a>
+          <a class="dropdown-item" href="form2">Form Anggota</a>
+          <a class="dropdown-item" href="form3">Form Simpanan</a>
           
       </li>
       <li class="nav-item">
@@ -165,7 +165,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="{{url('/logout')}}">Logout</a>
         </div>
       </div>
     </div>
