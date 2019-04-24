@@ -71,4 +71,5 @@ Route::get('/logout','\App\Http\Controllers\Auth\loginController@logout' );
 Route::get('/petugas','petugasController@index');
 Route::get('/petugas/edit/{id}','petugasController@edit');
 Route::get('/petugas/tambah','petugasController@tambah');
-Route::get('/petugas/store','petugasController@store');
+Route::post('/petugas/update','petugasController@update');
+

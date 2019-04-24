@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+	@foreach
 @extends('master')
 @section('content')
 <div class="col-lg-6">
@@ -7,7 +12,7 @@
                                     </div>
                                 <a href="/petugas"> </a>
                                     <div class="card-body card-block">
-                                        <form action="/petugas/store" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                        <form action="/petugas/update" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             {{ csrf_field()}}
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
@@ -66,11 +71,16 @@
                                                 </div>
                                                 <div class="card-footer">
                                         <button type="submit"  class="btn btn-primary btn-sm">
-                                            <i class="fa fa-dot-circle-o"></i> Submit 
+                                            <i class="fa fa-dot-circle-o"></i> Edit 
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                                @endsection
+    @endsection
+	@endforeach
+		
+ 
+</body>
+</html>
