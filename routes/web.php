@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-   return view('auths/login');
+   return view('Auth/login');
 });
 
 Route::get('master', function () {
@@ -21,22 +21,6 @@ Route::get('master', function () {
 
 Route::get('index', function () {
     return view('index');
-});
-
-Route::get('petugas', function () {
-    return view('petugas');
-});
-
-Route::get('anggota', function () {
-    return view('anggota');
-});
-
-Route::get('simpanan', function () {
-    return view('simpanan');
-});
-
-Route::get('login', function () {
-    return view('login');
 });
 
 Route::get('register', function () {
@@ -59,17 +43,23 @@ Route::get('form3', function () {
     return view('form3');
 });
 
-Route::get('/dasboard','DashboardController@index' );
+//Route::get('/dasboard','DashboardController@index' );
 
-Route::get('/login','AuthController@login');
+//Route::get('/login','AuthController@login');
 
-Route::post('/postlogin','AuthController@postlogin' );
+//Route::post('/postlogin','AuthController@postlogin' );
 
+Auth::routes();
+Route::get('/home','HomeController@index');
+Route::get('/home/login','HomeController@logout');
 Route::get('/logout','\App\Http\Controllers\Auth\loginController@logout' );
 
-//route CRUD
-Route::get('/petugas','petugasController@index');
-Route::get('/petugas/edit/{id}','petugasController@edit');
-Route::get('/petugas/tambah','petugasController@tambah');
-Route::post('/petugas/update','petugasController@update');
+//route CRUD 
+Route::resource('petugas','petugasController');
 
+
+//route CRUD 
+Route::resource('anggota','AnggotaController');
+
+//route CRUD
+Route::resource('simpanan','simpananController');

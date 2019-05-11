@@ -11,7 +11,7 @@
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Id Anggota</th>
+                    <th>Id Petugas</th>
                     <th>Nama</th>
                     <th>Alamat</th>
                     <th>Telp</th>
@@ -30,8 +30,13 @@
                   <td>{{$p->username}}</td>
                   <td>{{$p->jeniskelamin}}</td>
                   <td>
-                      <a href="/petugas/edit/{{$p->id_petugas}}"> Edit | </a>
-                      <a href="/petugas/hapus/{{$p->id_petugas}}"> Hapus </a>
+                  <form action="{{route('petugas.destroy', $p->id_petugas)}}" method="post">
+				            {{csrf_field()}}
+				            {{ method_field('DELETE') }}
+			
+				            <a class="btn btn-sm btn-warning href=" href="{{route('petugas.edit', $p->id_petugas)}}">Edit</a>
+				|           <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Are You Sure Want To Delete This Data?')">Hapus</button>
+				          </form>
                   </tr>
                   @endforeach
                 </thead>

@@ -9,64 +9,59 @@
                                     <div class="card-header">
                                         <strong>Edit Data</strong> 
                                     </div>
-                                <a href="/petugas"> </a>
+                                <a href="/simpanan"> </a>
                                     <div class="card-body card-block">
                                      
-	                                @foreach($petugas as $p)
-                                        <form action="{{route('petugas.update',$p->id_petugas)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+	                                @foreach($simpanan as $s)
+                                        <form action="{{route('simpanan.update',$s->Anggota_id_anggota)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             {{ csrf_field()}}
                                             {{method_field('PATCH')}}
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Nama</label>
+                                                    <label for="text-input" class=" form-control-label">Nama Anggota</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="nama"  value="{{$p->nama}}" placeholder="nama" class="form-control">
+                                                    <input type="text" id="text-input" name="nama_anggota" value="{{$s->nama_anggota}}" placeholder="nama" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="email-input" class=" form-control-label">Username</label>
+                                                    <label for="text-input" class=" form-control-label">Nama Simpanan</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="email" id="email-input" name="username" value="{{$p->username}}" placeholder="usernmae" class="form-control">
+                                                    <input type="text" id="text-input" name="nama_simpanan" value="{{$s->nama_simpanan}}" placeholder="nama" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">TTL</label>
+                                                    <label for="text-input" class=" form-control-label">Besar Simpanan</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="date" id="text-input" name="ttl"  value="{{$p->ttl}}" placeholder="TTL" class="form-control">
+                                                    <input type="text" id="text-input" name="besar_simpanan" value="{{$s->besar_simpanan}}" placeholder="nama" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Telp/Hp</label>
+                                                    <label for="email-input" class=" form-control-label">TTL</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="telp"  value="{{$p->telp}}" placeholder="Telp/Hp" class="form-control">
+                                                    <input type="date" id="email-input" name="ttl" value="{{$s->ttl}}" placeholder="TTL" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="textarea-input" class=" form-control-label">Alamat</label>
+                                                    <label for="text-input" class=" form-control-label">Keterangan</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                <input type="text" id="text-input" name="alamat"  value="{{$p->alamat}}" placeholder="alamat" class="form-control"> 
+                                                    <input type="text" id="text-input" name="keterangan" value="{{$s->keterangan}}" placeholder="Telp/Hp" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                <label for="text-input" class=" form-control-label">Jenis Kelamin</label>
-                                                </div>
-                                                    <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="jeniskelamin"  value="{{$p->jeniskelamin}}" placeholder="jenis kelamin" class="form-control"> 
-                                                </div>
+                        
                                                 <div class="card-footer">
                                         <button type="submit"  class="btn btn-primary btn-sm">
                                             <i class="fa fa-dot-circle-o"></i> Edit 
                                         </button>
+                                       
                                     </div>
                                 </div>
                                 @endforeach

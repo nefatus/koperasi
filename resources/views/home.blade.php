@@ -77,9 +77,9 @@
           <span>Form</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href="{{url('form1')}}">Form Petugas</a>
-          <a class="dropdown-item" href="{{url('form2')}}">Form Anggota</a>
-          <a class="dropdown-item" href="{{url('form3')}}">Form Simpanan</a>
+          <a class="dropdown-item" href="form1">Form Petugas</a>
+          <a class="dropdown-item" href="form2">Form Anggota</a>
+          <a class="dropdown-item" href="form3">Form Simpanan</a>
           
       </li>
       <li class="nav-item">

@@ -9,11 +9,11 @@
                                     <div class="card-header">
                                         <strong>Edit Data</strong> 
                                     </div>
-                                <a href="/petugas"> </a>
+                                <a href="/anggota"> </a>
                                     <div class="card-body card-block">
                                      
-	                                @foreach($petugas as $p)
-                                        <form action="{{route('petugas.update',$p->id_petugas)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
+	                                @foreach($anggota as $a)
+                                        <form action="{{route('anggota.update',$a->id_anggota)}}" method="post" enctype="multipart/form-data" class="form-horizontal">
                                             {{ csrf_field()}}
                                             {{method_field('PATCH')}}
                                             <div class="row form-group">
@@ -21,23 +21,15 @@
                                                     <label for="text-input" class=" form-control-label">Nama</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="nama"  value="{{$p->nama}}" placeholder="nama" class="form-control">
+                                                    <input type="text" id="text-input" name="nama" value="{{$a->nama}}" placeholder="nama" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="email-input" class=" form-control-label">Username</label>
+                                                    <label for="email-input" class=" form-control-label">TTL</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="email" id="email-input" name="username" value="{{$p->username}}" placeholder="usernmae" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">TTL</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="date" id="text-input" name="ttl"  value="{{$p->ttl}}" placeholder="TTL" class="form-control">
+                                                    <input type="date" id="email-input" name="ttl" value="{{$a->ttl}}" placeholder="TTL" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -45,7 +37,7 @@
                                                     <label for="text-input" class=" form-control-label">Telp/Hp</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="telp"  value="{{$p->telp}}" placeholder="Telp/Hp" class="form-control">
+                                                    <input type="text" id="text-input" name="telp" value="{{$a->telp}}" placeholder="Telp/Hp" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -53,7 +45,7 @@
                                                     <label for="textarea-input" class=" form-control-label">Alamat</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                <input type="text" id="text-input" name="alamat"  value="{{$p->alamat}}" placeholder="alamat" class="form-control"> 
+                                                <input type="text" id="text-input" name="alamat"  value="{{$a->alamat}}" placeholder="alamat" class="form-control"> 
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -61,12 +53,13 @@
                                                 <label for="text-input" class=" form-control-label">Jenis Kelamin</label>
                                                 </div>
                                                     <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="jeniskelamin"  value="{{$p->jeniskelamin}}" placeholder="jenis kelamin" class="form-control"> 
+                                                    <input type="text" id="text-input" name="jeniskelamin" value="{{$a->jeniskelamin}}"  placeholder="jenis kelamin" class="form-control"> 
                                                 </div>
                                                 <div class="card-footer">
                                         <button type="submit"  class="btn btn-primary btn-sm">
                                             <i class="fa fa-dot-circle-o"></i> Edit 
                                         </button>
+                                       
                                     </div>
                                 </div>
                                 @endforeach

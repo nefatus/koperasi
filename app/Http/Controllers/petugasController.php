@@ -16,7 +16,7 @@ class petugasController extends Controller
 
     public function tambah()
     {
-        return view('tambah');
+        return view('form1');
     }
 
     public function store(Request $request)
@@ -32,6 +32,11 @@ class petugasController extends Controller
         ]);
         return redirect('/petugas');
     }
+
+    public function show($id)
+    {
+        //
+    }
     public function edit($id)
     {
         //menambah data pegawai berdasarkan id yang dipilih
@@ -39,10 +44,10 @@ class petugasController extends Controller
         return view('edit',['petugas'=>$petugas]);
     }
     // update data petugas
-public function update(Request $request)
+public function update(Request $request,$id)
 {
 	// update data petugas
-	DB::table('petugas')->where('id_petugas',$request->id)->update([
+	DB::table('petugas')->where('id_petugas',$id)->update([
         'nama'      =>$request->nama,
         'alamat'    =>$request->alamat,
         'telp'      =>$request->telp,
@@ -52,5 +57,10 @@ public function update(Request $request)
 	]);
 	// alihkan halaman ke halaman pegawai
 	return redirect('/petugas');
+}
+public function destroy($id)
+{
+    DB::table('petugas')->where('id_petugas',$id)->delete();
+    return redirect('/petugas');
 }
 }
