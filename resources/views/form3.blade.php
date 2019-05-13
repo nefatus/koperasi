@@ -13,7 +13,7 @@
                                                     <label for="text-input" class=" form-control-label">Id Anggota</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="Anggota_id_anggota" placeholder="id_anggota" class="form-control">
+                                                    <input type="text" id="text-input" name="Anggota_id_anggota" placeholder="id anggota" class="form-control" required="required">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -21,7 +21,7 @@
                                                     <label for="text-input" class=" form-control-label">Nama</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="nama_anggota" placeholder="nama" class="form-control">
+                                                    <input type="text" id="text-input" name="nama_anggota" placeholder="nama" class="form-control" required="required" required="required">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -29,7 +29,7 @@
                                                     <label for="email-input" class=" form-control-label">Tanggal</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="date" id="email-input" name="ttl" placeholder="tanggal" class="form-control">
+                                                    <input type="date" id="email-input" name="ttl" placeholder="tanggal" class="form-control" required="required">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -37,7 +37,8 @@
                                                     <label for="email-input" class=" form-control-label">Nama Simpanan</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text-input" id="email-input" name="nama_simpanan" placeholder="nama simpanan" class="form-control">
+                                                    <input type="radio" id="text-input" name="nama_simpanan" value="Simpanan pokok"  required="required"> Simpanan Pokok<br>
+                                                    <input type="radio" id="text-input" name="nama_simpanan" value="Simpanan wajib"  required="required"> Simpanan Wajib<br>
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -45,7 +46,7 @@
                                                 <label for="email-input" class=" form-control-label">Besar Simpanan</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text-input" id="email-input" name="besar_simpanan" placeholder="besar simpanan" class="form-control">   
+                                                    <input type="text-input" id="email-input" name="besar_simpanan" placeholder="besar simpanan" class="form-control" required="required">   
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -53,7 +54,7 @@
                                                 <label for="email-input" class=" form-control-label">Keterangan</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text-input" id="email-input" name="keterangan" placeholder="keterangan" class="form-control">   
+                                                    <input type="text-input" id="email-input" name="keterangan" placeholder="keterangan" class="form-control" required="required">   
                                                 </div>
                                             
                                             <div class="card-footer">

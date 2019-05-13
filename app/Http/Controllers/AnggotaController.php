@@ -17,7 +17,10 @@ class AnggotaController extends Controller
     
         public function tambah()
         {
-            return view('form2');
+            //mengambil data
+            $petugas = petugas::orderBy('id_petugas','ASC')->get();
+            //mengirim data
+            return view('form2',compact('petugas'));
         }
     
         public function store(Request $request)

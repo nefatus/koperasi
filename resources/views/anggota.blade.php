@@ -5,14 +5,14 @@
 <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Data Table Example</div>
+            Data Table Anggota</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
                     <th>Id Anggota</th>
-                    <th>Petugas_id_petugas</th>
+                    <th>Id Petugas</th>
                     <th>Nama</th>
                     <th>Alamat</th>
                     <th>Telp</th>
@@ -23,7 +23,6 @@
                   @foreach($anggota as $a)
                   <tr>
                   <td>{{$a->id_anggota}}</td>
-                  
                   <td>{{$a->Petugas_id_petugas}}</td>                 
                   <td>{{$a->nama}}</td>
                   <td>{{$a->alamat}}</td>

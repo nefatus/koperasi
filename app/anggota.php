@@ -10,6 +10,6 @@ class anggota extends Model
     
 
     public function get_petugas(){
-        return $this->belongsTo(petugas::class,'Anggota_id_petugas','id_petugas');
+        return $this->belongsTo(petugas::class,'Petugas_id_petugas','id_petugas');
     }
 }

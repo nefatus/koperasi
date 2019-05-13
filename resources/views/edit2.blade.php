@@ -18,26 +18,10 @@
                                             {{method_field('PATCH')}}
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Nama Anggota</label>
+                                                    <label for="text-input" class=" form-control-label">Nama</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="nama_anggota" value="{{$s->nama_anggota}}" placeholder="nama" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Nama Simpanan</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="nama_simpanan" value="{{$s->nama_simpanan}}" placeholder="nama" class="form-control">
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Besar Simpanan</label>
-                                                </div>
-                                                <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="besar_simpanan" value="{{$s->besar_simpanan}}" placeholder="nama" class="form-control">
+                                                    <input type="text" id="text-input" name="nama_anggota" value="{{$s->nama_anggota}}" placeholder="nama_anggota" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="row form-group">
@@ -50,13 +34,31 @@
                                             </div>
                                             <div class="row form-group">
                                                 <div class="col col-md-3">
-                                                    <label for="text-input" class=" form-control-label">Keterangan</label>
+                                                    <label for="text-input" class=" form-control-label">Besar</label>
                                                 </div>
                                                 <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="keterangan" value="{{$s->keterangan}}" placeholder="Telp/Hp" class="form-control">
+                                                    <input type="text" id="text-input" name="besar_simpanan" value="{{$s->besar_simpanan}}" placeholder="besar_simpanas" class="form-control">
                                                 </div>
                                             </div>
-                        
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="textarea-input" class=" form-control-label">Simpanan</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                
+                                                    <input type="radio" name="nama_simpanan" value="Simpanan pokok">
+                                                            <?php if($s->nama_simpanan =='Simpanan pokok') : echo 'checked'; ?><?php endif ;?> Simpanan Pokok </br>
+                                                    <input type="radio"  name="nama_simpanan" value="simpanan wajib">
+                                                            <?php if($s->nama_simpanan =='simpanan wajib') : echo 'checked'; ?><?php endif ;?> Simpanan Wajib
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                <label for="text-input" class=" form-control-label">Keterangan</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="keterangan" value="{{$s->keterangan}}" placeholder="keterangan" class="form-control">
+                                                </div>
                                                 <div class="card-footer">
                                         <button type="submit"  class="btn btn-primary btn-sm">
                                             <i class="fa fa-dot-circle-o"></i> Edit 

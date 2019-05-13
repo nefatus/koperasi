@@ -61,7 +61,10 @@
                                                 <label for="text-input" class=" form-control-label">Jenis Kelamin</label>
                                                 </div>
                                                     <div class="col-12 col-md-9">
-                                                    <input type="text" id="text-input" name="jeniskelamin"  value="{{$p->jeniskelamin}}" placeholder="jenis kelamin" class="form-control"> 
+                                                    <input type="radio" name="jeniskelamin" value="Laki-laki"   >
+                                                            <?php if($p->jeniskelamin =='laki-laki') : echo 'checked'; ?><?php endif ;?> Laki-laki </br>
+                                                        <input type="radio"  name="jeniskelamin" value="Perempuan"  >
+                                                            <?php if($p->jeniskelamin =='Perempuan') : echo 'checked'; ?><?php endif ;?> Perempuan 
                                                 </div>
                                                 <div class="card-footer">
                                         <button type="submit"  class="btn btn-primary btn-sm">
